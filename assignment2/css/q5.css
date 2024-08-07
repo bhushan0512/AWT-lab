@@ -1,0 +1,11 @@
+/* External CSS for additional box model styling */
+
+.box-example {
+    border: 2px dashed #666;
+    padding: 20px;
+    margin: 15px;
+    width: 150px;
+    height: 150px;
+    background-color: #eee;
+    box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.2);
+}

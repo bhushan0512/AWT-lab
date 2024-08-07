@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Div and Span Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .container {
+            border: 2px solid #3498db;
+            padding: 10px;
+            background-color: #eaf2f8;
+        }
+        .highlight {
+            background-color: #ffeb3b;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+        .info {
+            border: 1px solid #2980b9;
+            padding: 10px;
+            background-color: #dff0d8;
+        }
+        .inline-example {
+            font-size: 1.2em;
+            color: #e74c3c;
+        }
+        .block-example {
+            border: 2px dashed #e74c3c;
+            padding: 15px;
+            background-color: #f2dede;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Div and Span Example</h1>
+    </header>
+    <section>
+        <h2>Using &lt;div&gt; and &lt;span&gt; Tags</h2>
+        
+        <div class="container">
+            <h3>Block-Level Element: &lt;div&gt;</h3>
+            <p>The &lt;div&gt; tag is a block-level element. It creates a new block, and content inside it will start on a new line. Here’s an example:</p>
+            <div class="block-example">
+                This is a <strong>&lt;div&gt;</strong> block-level element. It starts on a new line and stretches to the full width of its container.
+            </div>
+        </div>
+
+        <div class="info">
+            <h3>Inline-Level Element: &lt;span&gt;</h3>
+            <p>The &lt;span&gt; tag is an inline element. It does not start on a new line and only takes up as much width as necessary. Here’s an example:</p>
+            <p>This is an example of <span class="highlight">inline styling</span> using the <strong>&lt;span&gt;</strong> tag. The <span class="inline-example">span</span> element does not affect the layout of surrounding text.</p>
+        </div>
+
+        <div class="container">
+            <h3>Combined Use of &lt;div&gt; and &lt;span&gt;</h3>
+            <p>The &lt;div&gt; and &lt;span&gt; tags can be used together to structure and style content. For example:</p>
+            <div class="block-example">
+                This <span class="highlight">text</span> is inside a <span class="highlight">div</span> element. <span class="inline-example">Inline</span> elements like <span class="highlight">span</span> are used for styling specific parts of text without disrupting the block structure.
+            </div>
+        </div>
+    </section>
+</body>
+</html>

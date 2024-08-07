@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font and Text Styles</title>
+    <link rel="stylesheet" href="./q3.css">
+    <style>
+        /* Internal CSS for demonstration purposes */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+            color: #333;
+        }
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+        }
+        h1 {
+            font-size: 2.5em;
+            font-weight: bold;
+            margin: 0;
+        }
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            font-family: 'Georgia', serif;
+            font-size: 2em;
+            color: #2980b9;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            text-align: justify;
+            margin: 0 0 20px;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .bold {
+            font-weight: bold;
+        }
+        .underline {
+            text-decoration: underline;
+        }
+        .uppercase {
+            text-transform: uppercase;
+        }
+        .spacing {
+            letter-spacing: 2px;
+            word-spacing: 4px;
+        }
+        .shadow {
+            text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
+        }
+        blockquote {
+            border-left: 4px solid #3498db;
+            padding-left: 15px;
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Font and Text Styles Showcase</h1>
+    </header>
+    <section class="section">
+        <h2>Font Family and Size</h2>
+        <p>This paragraph demonstrates the use of the <span class="bold">Arial</span> font-family, with a font size of <span class="italic">1.2em</span>. The <span class="italic">Georgia</span> font is used for the heading below.</p>
+    </section>
+    <section class="section">
+        <h2>Font Weight and Style</h2>
+        <p class="bold">This text is bold, demonstrating the use of the <span class="bold">font-weight</span> property.</p>
+        <p class="italic">This text is italic, showing the <span class="italic">font-style</span> property in action.</p>
+        <p class="underline">This text is underlined, using the <span class="underline">text-decoration</span> property.</p>
+    </section>
+    <section class="section">
+        <h2>Text Transform and Spacing</h2>
+        <p class="uppercase">This text is transformed to uppercase using the <span class="uppercase">text-transform</span> property.</p>
+        <p class="spacing">This text has increased letter and word spacing, demonstrating the use of <span class="spacing">letter-spacing</span> and <span class="spacing">word-spacing</span> properties.</p>
+    </section>
+    <section class="section">
+        <h2>Text Shadow</h2>
+        <p class="shadow">This text has a subtle shadow applied using the <span class="shadow">text-shadow</span> property, creating a 3D effect.</p>
+    </section>
+    <section class="section">
+        <h2>Blockquote Style</h2>
+        <blockquote>
+            “This is a blockquote styled with a border, padding, and italic font style. It shows how block-level quotes can be formatted for emphasis.”
+        </blockquote>
+    </section>
+</body>
+</html>
