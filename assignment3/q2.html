@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>String Methods</title>
+    <script>
+        function showStringMethods() {
+            let text = "Hello, World!";
+            document.getElementById('textLength').innerText = `Length: ${text.length}`;
+            document.getElementById('upperCase').innerText = `Uppercase: ${text.toUpperCase()}`;
+            document.getElementById('lowerCase').innerText = `Lowercase: ${text.toLowerCase()}`;
+            document.getElementById('substring').innerText = `Substring (0, 5): ${text.substring(0, 5)}`;
+            document.getElementById('includes').innerText = `Includes 'World': ${text.includes("World")}`;
+            document.getElementById('replace').innerText = `Replace 'World': ${text.replace("World", "JavaScript")}`;
+        }
+    </script>
+</head>
+<body onload="showStringMethods()">
+    <h1>String Methods</h1>
+    <p id="textLength"></p>
+    <p id="upperCase"></p>
+    <p id="lowerCase"></p>
+    <p id="substring"></p>
+    <p id="includes"></p>
+    <p id="replace"></p>
+</body>
+</html>

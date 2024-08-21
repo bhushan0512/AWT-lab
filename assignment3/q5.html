@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality Operators</title>
+    <script>
+        function showEquality() {
+            let a = 5;
+            let b = '5';
+
+            document.getElementById('looseEquality').innerText = `Loose Equality (a == b): ${a == b}`; // true
+            document.getElementById('strictEquality').innerText = `Strict Equality (a === b): ${a === b}`; // false
+        }
+    </script>
+</head>
+<body onload="showEquality()">
+    <h1>Strict vs. Loose Equality</h1>
+    <p id="looseEquality"></p>
+    <p id="strictEquality"></p>
+</body>
+</html>

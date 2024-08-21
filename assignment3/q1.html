@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+    <script>
+        function showConversions() {
+            // Implicit Type Conversion
+            let num = 5;
+            let str = "10";
+            let implicitResult = num + str; // Implicitly converts num to a string
+            document.getElementById('implicitResult').innerText = `Implicit Conversion Result: ${implicitResult}`;
+            
+            // Explicit Type Conversion
+            let numStr = "20";
+            let explicitResult = Number(numStr); // Explicitly converts numStr to a number
+            document.getElementById('explicitResult').innerText = `Explicit Conversion Result: ${explicitResult + 5}`;
+        }
+    </script>
+</head>
+<body onload="showConversions()">
+    <h1>Type Conversion</h1>
+    <p id="implicitResult"></p>
+    <p id="explicitResult"></p>
+</body>
+</html>

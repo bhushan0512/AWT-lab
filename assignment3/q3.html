@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date Methods</title>
+    <script>
+        function showDateMethods() {
+            let date = new Date();
+            document.getElementById('currentDate').innerText = `Current Date and Time: ${date.toString()}`;
+            document.getElementById('year').innerText = `Year: ${date.getFullYear()}`;
+            document.getElementById('month').innerText = `Month: ${date.getMonth() + 1}`; // Months are 0-indexed
+            document.getElementById('date').innerText = `Date: ${date.getDate()}`;
+            document.getElementById('dateString').innerText = `Date String: ${date.toDateString()}`;
+            document.getElementById('localDateString').innerText = `Local Date String: ${date.toLocaleDateString()}`;
+            document.getElementById('isoString').innerText = `ISO String: ${date.toISOString()}`;
+        }
+    </script>
+</head>
+<body onload="showDateMethods()">
+    <h1>Date Methods</h1>
+    <p id="currentDate"></p>
+    <p id="year"></p>
+    <p id="month"></p>
+    <p id="date"></p>
+    <p id="dateString"></p>
+    <p id="localDateString"></p>
+    <p id="isoString"></p>
+</body>
+</html>

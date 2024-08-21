@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Menu</title>
+    <script>
+        function showMenu() {
+            let day = new Date().getDay();
+            let menu = '';
+            let borderSize = '';
+
+            switch (day) {
+                case 0: // Sunday
+                    menu = '<table border="1"><tr><th>Sunday Menu</th></tr><tr><td>Pancakes</td></tr></table>';
+                    borderSize = '1px';
+                    break;
+                case 1: // Monday
+                    menu = '<table border="2"><tr><th>Monday Menu</th></tr><tr><td>Spaghetti</td></tr></table>';
+                    borderSize = '2px';
+                    break;
+                case 2: // Tuesday
+                    menu = '<table border="3"><tr><th>Tuesday Menu</th></tr><tr><td>Tacos</td></tr></table>';
+                    borderSize = '3px';
+                    break;
+                case 3: // Wednesday
+                    menu = '<table border="4"><tr><th>Wednesday Menu</th></tr><tr><td>Chicken Salad</td></tr></table>';
+                    borderSize = '4px';
+                    break;
+                case 4: // Thursday
+                    menu = '<table border="5"><tr><th>Thursday Menu</th></tr><tr><td>Pizza</td></tr></table>';
+                    borderSize = '5px';
+                    break;
+                case 5: // Friday
+                    menu = '<table border="6"><tr><th>Friday Menu</th></tr><tr><td>Burgers</td></tr></table>';
+                    borderSize = '6px';
+                    break;
+                case 6: // Saturday
+                    menu = '<table border="7"><tr><th>Saturday Menu</th></tr><tr><td>BBQ</td></tr></table>';
+                    borderSize = '7px';
+                    break;
+            }
+
+            document.getElementById('menu').innerHTML = menu;
+        }
+    </script>
+</head>
+<body onload="showMenu()">
+    <h1>Weekly Menu</h1>
+    <div id="menu"></div>
+</body>
+</html>
