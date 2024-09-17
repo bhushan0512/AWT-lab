@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equality Operators</title>
+</head>
+<body>
+    <h1>Strict vs. Loose Equality</h1>
+    <script>
+        var num = 5;
+        var str = "5";
+
+        
+        var looseEquality = (num == str);
+       
+        var strictEquality = (num === str);
+
+        
+        document.write("<p>Value of num: " + num + "</p>");
+        document.write("<p>Value of str: '" + str + "'</p>");
+        document.write("<p>Loose Equality (num == str): " + looseEquality + "</p>");
+        document.write("<p>Strict Equality (num === str): " + strictEquality + "</p>");
+    </script>
+</body>
+</html>

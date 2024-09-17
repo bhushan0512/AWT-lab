@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekly Menu</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 50%;
+            margin: 20px auto;
+            text-align: center;
+        }
+        .small-border { border: 2px solid black; }
+        .medium-border { border: 4px solid black; }
+        .large-border { border: 6px solid black; }
+        th, td {
+            padding: 10px;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Weekly Menu</h1>
+    
+    <label for="daySelect">Select a day:</label>
+    <select id="daySelect" onchange="updateMenu()">
+        <option value="0">Sunday</option>
+        <option value="1">Monday</option>
+        <option value="2">Tuesday</option>
+        <option value="3">Wednesday</option>
+        <option value="4">Thursday</option>
+        <option value="5">Friday</option>
+        <option value="6">Saturday</option>
+    </select>
+
+    <div id="menuContainer"></div>
+
+    <script>
+        function updateMenu() {
+          
+            var day = parseInt(document.getElementById('daySelect').value);
+            
+
+            var menuItem = "";
+            var borderClass = "";
+
+          
+            switch(day) {
+                case 0: 
+                    menuItem = "Chicken Biriyani";
+                    borderClass = "small-border";
+                    break;
+                case 1: 
+                    menuItem = "Masala Dosa";
+                    borderClass = "medium-border";
+                    break;
+                case 2: 
+                    menuItem = "Rice and Sambhar";
+                    borderClass = "large-border";
+                    break;
+                case 3: 
+                    menuItem = "Chicken Tikka Masala";
+                    borderClass = "small-border";
+                    break;
+                case 4: 
+                    menuItem = "Jeera Rice";
+                    borderClass = "medium-border";
+                    break;
+                case 5:
+                    menuItem = "Fish and Chips";
+                    borderClass = "large-border";
+                    break;
+                case 6: 
+                    menuItem = "Grilled Chicken";
+                    borderClass = "small-border";
+                    break;
+            }
+
+          
+            var menuHTML = "<table class='" + borderClass + "'>" +
+                           "<tr><th>Day</th><th>Menu</th></tr>" +
+                           "<tr><td>" + ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][day] + "</td>" +
+                           "<td>" + menuItem + "</td></tr>" +
+                           "</table>";
+
+           
+            document.getElementById('menuContainer').innerHTML = menuHTML;
+        }
+
+        
+        updateMenu();
+    </script>
+</body>
+</html>

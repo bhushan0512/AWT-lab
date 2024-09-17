@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Count Names Ending in 'ie' or 'y'</title>
+    <script>
+        function countNamesEnding() {
+          
+            let input = document.getElementById('namesInput').value;
+
+            
+            let namesArray = input.split(',').map(name => name.trim());
+
+           
+            let count = namesArray.filter(name => name.endsWith('ie') || name.endsWith('y')).length;
+
+          
+            document.getElementById('result').textContent = "Count: " + count;
+        }
+    </script>
+</head>
+<body>
+    <h1>Count Names Ending in 'ie' or 'y'</h1>
+    <p>Enter names separated by commas:</p>
+    <input type="text" id="namesInput" placeholder="e.g. Charlie, Annie, Sally">
+    <button onclick="countNamesEnding()">Count</button>
+    <p id="result"></p>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Type Conversion</title>
+</head>
+<body>
+    <h1>Type Conversion Example</h1>
+    
+    <script>
+        
+        var num = 5;                 
+        var str = "10";             
+
+        
+        var implicitResult = num + str;  
+
+        document.write("Implicit Conversion:<br>");
+        document.write("5 (number) + '10' (string) = " + implicitResult + "<br>");
+        document.write("Here, the number is automatically converted to a string, and concatenation occurs.<br><br>");
+
+        
+        var explicitNum = 20;          
+        var explicitStr = "30";        
+
+       
+        var convertedStrToNum = Number(explicitStr);  
+        
+        
+        var explicitResult = explicitNum + convertedStrToNum;  
+        
+        document.write("Explicit Conversion:<br>");
+        document.write("20 (number) + Number('30') (converted string) = " + explicitResult + "<br>");
+        document.write("Here, we explicitly converted the string '30' to a number using Number(), so we get a numerical addition.<br>");
+    </script>
+</body>
+</html>

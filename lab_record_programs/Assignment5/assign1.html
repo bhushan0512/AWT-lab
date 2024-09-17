@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Table</title>
+    <script>
+        function showNumberTable() {
+          
+            for (let i = 5; i <= 15; i++) {
+                let square = i * i; 
+                let cube = i * i * i; 
+                
+               
+                let message = `Number: ${i}\nSquare: ${square}\nCube: ${cube}`;
+                
+               
+                alert(message);
+            }
+        }
+        
+        window.onload = showNumberTable;
+    </script>
+</head>
+<body>
+    <h1>Number Table Example</h1>
+    <p>The table of numbers from 5 to 15 will be displayed in alerts.</p>
+</body>
+</html>

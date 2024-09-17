@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Sorter</title>
+</head>
+<body>
+    <h1>Number Sorter</h1>
+    <label for="numbers">Enter numbers separated by commas:</label><br>
+    <input type="text" id="numbers" placeholder="e.g., 5, 3, 8, 1"><br>
+    <label for="order">Select sorting order:</label><br>
+    <select id="order">
+        <option value="ascending">Ascending</option>
+        <option value="descending">Descending</option>
+    </select><br>
+    <button onclick="sortNumbers()">Sort</button><br><br>
+    <h2>Sorted Numbers:</h2>
+    <p id="result"></p>
+
+    <script>
+        function sortNumbers() {
+         
+            const numbersInput = document.getElementById('numbers').value;
+            const order = document.getElementById('order').value;
+
+           
+            let numbersArray = numbersInput.split(',').map(num => parseFloat(num.trim()));
+
+         
+            if (numbersArray.some(isNaN)) {
+                document.getElementById('result').innerText = 'Please enter valid numbers.';
+                return;
+            }
+
+            
+            if (order === 'ascending') {
+                numbersArray.sort((a, b) => a - b);
+            } else if (order === 'descending') {
+                numbersArray.sort((a, b) => b - a);
+            }
+
+          
+            document.getElementById('result').innerText = numbersArray.join(', ');
+        }
+    </script>
+</body>
+</html>

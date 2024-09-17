@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Variable Scope</title>
+</head>
+<body>
+    <h1>Variable Scope Example</h1>
+    <script>
+        
+        var globalNumber = 42;
+        var globalString = "I am a global string";
+
+        function showScope() {
+            
+            var localNumber = 7;
+            var localString = "I am a local string";
+
+            
+            document.write("<p>Inside the function:</p>");
+            document.write("<p>Global number: " + globalNumber + "</p>");
+            document.write("<p>Global string: " + globalString + "</p>");
+            document.write("<p>Local number: " + localNumber + "</p>");
+            document.write("<p>Local string: " + localString + "</p>");
+        }
+
+     
+        showScope();
+
+        
+        document.write("<p>Outside the function:</p>");
+        document.write("<p>Global number: " + globalNumber + "</p>");
+        document.write("<p>Global string: " + globalString + "</p>");
+        document.write("<p>Local number: " + (typeof localNumber === 'undefined' ? "undefined" : localNumber) + "</p>");
+        document.write("<p>Local string: " + (typeof localString === 'undefined' ? "undefined" : localString) + "</p>");
+    </script>
+</body>
+</html>
