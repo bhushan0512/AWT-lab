@@ -1,9 +1,0 @@
-/* External Stylesheet */
-p {
-    color: red; /* Default color, overridden by internal and inline styles */
-}
-
-.special {
-    font-weight: bold;
-    color: purple; /* This class will apply to the paragraph with the "special" class */
-}
