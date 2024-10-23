@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Move Paragraph Example</title>
+    <style>
+        #movable {
+            position: absolute; /* Allow movement */
+            background-color: lightblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Move the Paragraph</h2>
+    <p id="movable">This is a movable paragraph.</p>
+
+    <label for="x">X Coordinate:</label>
+    <input type="number" id="x" placeholder="Enter X">
+    <br>
+    <label for="y">Y Coordinate:</label>
+    <input type="number" id="y" placeholder="Enter Y">
+    <br>
+    <button onclick="moveParagraph()">Move Paragraph</button>
+
+    <script>
+        function moveParagraph() {
+            const x = document.getElementById('x').value;
+            const y = document.getElementById('y').value;
+
+            const paragraph = document.getElementById('movable');
+            paragraph.style.left = x + 'px'; // Set new X position
+            paragraph.style.top = y + 'px';  // Set new Y position
+        }
+    </script>
+</body>
+</html>

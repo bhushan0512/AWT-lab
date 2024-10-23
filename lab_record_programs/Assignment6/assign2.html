@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessing Elements in JavaScript</title>
+    <style>
+        #myElement {
+            background-color: lightblue;
+            padding: 10px;
+            margin: 10px;
+        }
+        .output {
+            margin-top: 20px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="header">Accessing Elements Example</h1>
+    <div id="myElement">This is my element.</div>
+    <div class="myClass">Class Element 1</div>
+    <div class="myClass">Class Element 2</div>
+    <div class="myClass">Class Element 3</div>
+
+    <button onclick="accessElements()">Access Elements</button>
+
+    <div class="output" id="output"></div>
+
+    <script>
+        function accessElements() {
+            const outputDiv = document.getElementById('output');
+            outputDiv.innerHTML = ''; // Clear previous output
+
+            // Access by ID
+            const byId = document.getElementById('myElement');
+            outputDiv.innerHTML += 'Accessed by ID: ' + byId.innerText + '<br>';
+
+            // Access by class name
+            const byClass = document.getElementsByClassName('myClass');
+            outputDiv.innerHTML += 'Accessed by Class Name: ' + byClass[0].innerText + '<br>'; // Access the first element
+
+            // Access by tag name
+            const byTag = document.getElementsByTagName('div');
+            outputDiv.innerHTML += 'Accessed by Tag Name: ' + byTag[0].innerText + '<br>'; // Access the first div
+
+            // Access by querySelector (first matching element)
+            const byQuerySelector = document.querySelector('.myClass');
+            outputDiv.innerHTML += 'Accessed by querySelector: ' + byQuerySelector.innerText + '<br>';
+
+            // Access by querySelectorAll (all matching elements)
+            const allByQuerySelector = document.querySelectorAll('.myClass');
+            outputDiv.innerHTML += 'Total elements accessed by querySelectorAll: ' + allByQuerySelector.length + '<br>';
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Position Examples</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 200vh; /* To allow scrolling */
+        }
+        .box {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Static Positioning */
+        .static {
+            background-color: blue;
+        }
+
+        /* Relative Positioning */
+        .relative {
+            background-color: green;
+            position: relative;
+            top: 20px; /* Moves down 20px */
+            left: 20px; /* Moves right 20px */
+        }
+
+        /* Absolute Positioning */
+        .absolute {
+            background-color: orange;
+            position: absolute;
+            top: 50px; /* 50px from the top of the nearest ancestor */
+            left: 150px; /* 150px from the left */
+        }
+
+        /* Fixed Positioning (Adjusted) */
+        .fixed {
+            background-color: red;
+            position: fixed;
+            top: 150px; /* Adjusted to 150px from the top of the viewport */
+            left: 20px; /* Adjusted to 20px from the left */
+        }
+
+        /* Sticky Positioning */
+        .sticky {
+            background-color: purple;
+            position: sticky;
+            top: 0; /* Sticks to the top when scrolling */
+        }
+    </style>
+</head>
+<body>
+    <h2>CSS Position Examples</h2>
+
+    <div class="box static">Static</div>
+    <div class="box relative">Relative</div>
+    <div class="box absolute">Absolute</div>
+    <div class="box fixed">Fixed</div> <!-- Now appears below the other elements -->
+    <div class="box sticky">Sticky</div>
+
+    <div style="height: 1000px;"></div> <!-- Extra space for scrolling -->
+</body>
+</html>

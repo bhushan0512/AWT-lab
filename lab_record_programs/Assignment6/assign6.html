@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Computation Page</title>
+</head>
+<body>
+    <h1>Computation Page</h1>
+    <div>
+        <input type="text" id="num1" placeholder="Enter first number">
+        <input type="text" id="num2" placeholder="Enter second number">
+        <input type="text" id="operation" placeholder="Enter operation (+, -, *, /, %)">
+        <button id="computeBtn">Compute</button>
+        <input type="text" id="result" placeholder="Result" readonly>
+    </div>
+
+    <script>
+        window.onload = function() {
+            alert('Welcome to the Computation page');
+        };
+
+        document.getElementById('computeBtn').onclick = function() {
+            const num1 = document.getElementById('num1').value;
+            const num2 = document.getElementById('num2').value;
+            const operation = document.getElementById('operation').value;
+            const resultField = document.getElementById('result');
+
+            // Validate numbers
+            if (isNaN(num1) || isNaN(num2)) {
+                alert('Please enter valid numbers.');
+                return;
+            }
+
+            // Validate operation
+            const validOperations = ['+', '-', '*', '/', '%'];
+            if (!validOperations.includes(operation)) {
+                alert('Please enter a valid operation (+, -, *, /, %).');
+                return;
+            }
+
+            // Compute the result
+            let result;
+            switch (operation) {
+                case '+':
+                    result = Number(num1) + Number(num2);
+                    break;
+                case '-':
+                    result = Number(num1) - Number(num2);
+                    break;
+                case '*':
+                    result = Number(num1) * Number(num2);
+                    break;
+                case '/':
+                    result = Number(num1) / Number(num2);
+                    break;
+                case '%':
+                    result = Number(num1) % Number(num2);
+                    break;
+            }
+
+            // Display the result
+            resultField.value = result;
+        };
+    </script>
+</body>
+</html>

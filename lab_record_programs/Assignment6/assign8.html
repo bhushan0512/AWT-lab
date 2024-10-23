@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Propagation Example</title>
+    <style>
+        #outer {
+            padding: 20px;
+            background-color: lightcoral;
+        }
+        #middle {
+            padding: 20px;
+            background-color: lightblue;
+        }
+        #inner {
+            padding: 20px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <div id="outer">
+        Outer Div
+        <div id="middle">
+            Middle Div
+            <div id="inner">
+                Inner Div
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Event listener for outer div (bubbling)
+        document.getElementById('outer').addEventListener('click', function() {
+            alert('Outer Div Clicked (Bubbling)');
+        });
+
+        // Event listener for middle div (bubbling)
+        document.getElementById('middle').addEventListener('click', function() {
+            alert('Middle Div Clicked (Bubbling)');
+        });
+
+        // Event listener for inner div (target)
+        document.getElementById('inner').addEventListener('click', function(event) {
+            alert('Inner Div Clicked (Target)');
+            // Stop the event from bubbling up to parent elements
+            event.stopPropagation();
+        });
+
+        // Event listener for outer div (capturing)
+        document.getElementById('outer').addEventListener('click', function() {
+            alert('Outer Div Clicked (Capturing)');
+        }, true); // Capturing phase
+        
+    </script>
+</body>
+</html>

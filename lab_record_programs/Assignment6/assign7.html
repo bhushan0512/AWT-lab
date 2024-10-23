@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form id="registrationForm">
+        <div>
+            <label>Name:</label>
+            <input type="text" id="name" placeholder="First Middle Last" required>
+        </div>
+        <div>
+            <label>Age:</label>
+            <input type="number" id="age" min="18" max="60" required>
+        </div>
+        <div>
+            <label>Mobile:</label>
+            <input type="text" id="mobile" placeholder="Indian Mobile" required>
+        </div>
+        <div>
+            <label>Aadhar:</label>
+            <input type="text" id="adhar" placeholder="1234 5678 9012" required>
+        </div>
+        <div>
+            <label>Password:</label>
+            <input type="password" id="password" required>
+        </div>
+        <div>
+            <label>Confirm Password:</label>
+            <input type="password" id="confirmPassword" required>
+        </div>
+        <button type="submit">Register</button>
+    </form>
+
+    <script>
+        document.getElementById('registrationForm').onsubmit = function(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const age = parseInt(document.getElementById('age').value);
+            const mobile = document.getElementById('mobile').value.trim();
+            const adhar = document.getElementById('adhar').value.trim();
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            // Simple validations
+            if (!/^[A-Z][a-z]+( [A-Z][a-z]+){2}$/.test(name)) {
+                alert('Enter valid names (First Middle Last).');
+                return;
+            }
+            if (age < 18 || age > 60) {
+                alert('Age must be between 18 and 60.');
+                return;
+            }
+            if (!/^[6-9]\d{9}$/.test(mobile)) {
+                alert('Enter a valid Indian mobile number.');
+                return;
+            }
+            if (!/^\d{4}\s\d{4}\s\d{4}$/.test(adhar)) {
+                alert('Aadhar must be in the format: 1234 5678 9012.');
+                return;
+            }
+            if (!/^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&]).{8,}$/.test(password)) {
+                alert('Password must be at least 8 characters long with letters, digits, and a special character.');
+                return;
+            }
+            if (password !== confirmPassword) {
+                alert('Passwords do not match.');
+                return;
+            }
+
+            alert('Registration successful!');
+        };
+    </script>
+</body>
+</html>

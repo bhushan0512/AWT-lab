@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image at Mouse Click</title>
+    <style>
+        body {
+            position: relative; /* Allow absolute positioning of the image */
+        }
+        img {
+            display: none; /* Initially hide the image */
+            position: absolute; /* Position it absolutely */
+            width: 100px; /* Set image size */
+            height: auto;
+            pointer-events: none; /* Prevent the image from interfering with mouse events */
+        }
+    </style>
+</head>
+<body>
+    <h1>Click Anywhere to Place Your Image</h1>
+
+    <img id="myImage" src="your-image-url.jpg" alt="Your Image">
+
+    <script>
+        const myImage = document.getElementById('myImage');
+
+        document.addEventListener('click', (event) => {
+            // Set the image position to the click coordinates
+            myImage.style.left = event.pageX + 'px';
+            myImage.style.top = event.pageY + 'px';
+            myImage.style.display = 'block'; // Show the image
+        });
+    </script>
+</body>
+</html>

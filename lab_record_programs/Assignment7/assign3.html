@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .help-box {
+            background-color: #f0f8ff;
+            border: 1px solid #007BFF;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    
+    <div class="help-box">
+        <strong>Help:</strong>
+        <ul>
+            <li>Name: Enter your full name.</li>
+            <li>Age: Must be between 18 and 60.</li>
+            <li>Mobile Number: Enter a valid 10-digit mobile number.</li>
+            <li>Aadhar Number: Enter your 12-digit Aadhar number.</li>
+            <li>Password: Include letters, numbers, and special characters.</li>
+            <li>Confirm Password: Must match the password above.</li>
+        </ul>
+    </div>
+
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" placeholder="Full Name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="age">Age:</label>
+            <input type="number" id="age" placeholder="Age" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mobile">Mobile Number:</label>
+            <input type="tel" id="mobile" placeholder="10-digit Mobile Number" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="aadhar">Aadhar Number:</label>
+            <input type="text" id="aadhar" placeholder="12-digit Aadhar Number" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="password">Set Password:</label>
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="confirm-password">Confirm Password:</label>
+            <input type="password" id="confirm-password" placeholder="Confirm Password" required>
+        </div>
+        
+        <button type="submit">Register</button>
+    </form>
+</body>
+</html>
